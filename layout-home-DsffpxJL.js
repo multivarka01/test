@@ -1,1 +1,0 @@
-import{Bt as e,Dt as t,Tt as n,Wt as r,n as i}from"./index-BPkuk6PH.js";var a={},o={class:`home-layout`};function s(i,a){let s=r(`RouterView`);return e(),n(`div`,o,[t(s)])}var c=i(a,[[`render`,s],[`__scopeId`,`data-v-d648aa1a`]]);export{c as default};
