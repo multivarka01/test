@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElemenT - Личный профиль</title>
+    <meta name="description" content="Личный профиль игрока ElemenT. CS 2, Standoff 2, Faceit и социальные сети.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <main class="container">
+        <!-- Profile Section -->
+        <header class="profile-header glass-panel">
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <img src="avatar.jpg" alt="ElemenT Avatar" class="avatar" id="profile-avatar">
+            </div>
+            <h1 class="nickname">ElemenT</h1>
+            <p class="bio">Привет! Я ElemenT. Увлекаюсь киберспортом и соревновательными шутерами. Здесь вы можете найти мои игровые профили и социальные сети.</p>
+        </header>
+
+        <!-- Tabs Navigation -->
+        <nav class="tabs-nav glass-panel">
+            <button class="tab-btn active" data-tab="tab-main"><i class="fa-solid fa-house"></i> Главная</button>
+            <button class="tab-btn" data-tab="tab-faceit"><i class="fa-solid fa-chart-simple"></i> Faceit Статистика</button>
+            <button class="tab-btn" data-tab="tab-screenshots"><i class="fa-solid fa-images"></i> Скриншоты</button>
+        </nav>
+
+        <!-- MAIN TAB -->
+        <div id="tab-main" class="tab-content active">
+            <!-- Games Section -->
+            <section class="games-section">
+                <h2 class="section-title">Во что я играю</h2>
+                <div class="cards-grid">
+                    <!-- CS 2 Card -->
+                    <div class="game-card cs2-card">
+                        <div class="card-bg"></div>
+                        <div class="card-content">
+                            <div class="game-icon">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <h3>Counter-Strike 2</h3>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Звание</span>
+                                    <span class="stat-value text-gradient-gold">Gold Nova</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Faceit</span>
+                                    <span class="stat-value text-gradient-gold">5 LVL</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Часы</span>
+                                    <span class="stat-value">700</span>
+                                </div>
+                            </div>
+                            <a href="https://steamcommunity.com/profiles/76561199823207112" target="_blank" class="btn primary-btn">Смотреть профиль Steam</a>
+                        </div>
+                    </div>
+
+                    <!-- Standoff 2 Card -->
+                    <div class="game-card so2-card">
+                        <div class="card-bg"></div>
+                        <div class="card-content">
+                            <div class="game-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h3>Standoff 2</h3>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Ранг</span>
+                                    <span class="stat-value text-gradient-purple">The Legend</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">K/D</span>
+                                    <span class="stat-value">2.15</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">ID</span>
+                                    <span class="stat-value" id="so2-id-value">110467708</span>
+                                </div>
+                            </div>
+                            <button class="btn primary-btn" id="copy-so2-btn">Копировать ID</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Section -->
+            <section class="social-section glass-panel">
+                <h2 class="section-title">Мои соц сети</h2>
+                <div class="social-links">
+                    <button class="social-link discord" title="Discord" id="copy-discord-btn" style="border: 1px solid #333; cursor: pointer;">
+                        <i class="fa-brands fa-discord"></i>
+                        <span id="discord-text">Discord</span>
+                    </button>
+                    <a href="https://www.youtube.com/@Element192" target="_blank" class="social-link youtube" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://www.twitch.tv/element_ww" target="_blank" class="social-link twitch" title="Twitch">
+                        <i class="fa-brands fa-twitch"></i>
+                        <span>Twitch</span>
+                    </a>
+                    <a href="https://t.me/Elementyc" target="_blank" class="social-link telegram" title="Telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="https://steamcommunity.com/profiles/76561199823207112" target="_blank" class="social-link steam" title="Steam">
+                        <i class="fa-brands fa-steam"></i>
+                        <span>Steam</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- FACEIT TAB -->
+        <div id="tab-faceit" class="tab-content">
+            <section class="faceit-section glass-panel">
+                <div class="faceit-header">
+                    <img src="https://corporate.faceit.com/wp-content/uploads/2021/04/faceit-logo.png" alt="Faceit Logo" class="faceit-logo">
+                    <h2>Статистика ElemenT1tapp</h2>
+                </div>
+                
+                <div class="faceit-main-stats">
+                    <div class="faceit-level-box">
+                        <span class="level-number">5</span>
+                        <span class="level-label">Уровень</span>
+                    </div>
+                    <div class="faceit-elo-box">
+                        <span class="elo-value">1091</span>
+                        <span class="elo-label">ELO</span>
+                    </div>
+                </div>
+
+                <div class="faceit-grid">
+                    <div class="faceit-stat-card">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <span class="f-label">Рейтинг (30д)</span>
+                        <span class="f-value">1.21</span>
+                    </div>
+                    <div class="faceit-stat-card">
+                        <i class="fa-solid fa-skull"></i>
+                        <span class="f-label">Headshots</span>
+                        <span class="f-value">44%</span>
+                    </div>
+                    <div class="faceit-stat-card">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span class="f-label">Win Rate</span>
+                        <span class="f-value">49.0%</span>
+                    </div>
+                    <div class="faceit-stat-card">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span class="f-label">Матчи</span>
+                        <span class="f-value">69</span>
+                    </div>
+                </div>
+
+                <div class="faceit-action">
+                    <a href="https://www.faceit.com/ru/players/ElemenT1tapp" target="_blank" class="btn faceit-btn">Открыть профиль Faceit <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </section>
+        </div>
+
+        <!-- SCREENSHOTS TAB -->
+        <div id="tab-screenshots" class="tab-content">
+            <section class="gallery-section glass-panel">
+                <h2 class="section-title">Игровые скриншоты</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="screenshot1.jpg" alt="Скриншот 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshot2.jpg" alt="Скриншот 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshot3.png" alt="Скриншот 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshot4.jpg" alt="Скриншот 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="screenshot5.jpg" alt="Скриншот 5">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
